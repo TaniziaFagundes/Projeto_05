@@ -1,0 +1,285 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+}
+
+html,body{
+	height: 100%;
+}
+
+.clear{
+	clear: both;
+}
+
+.container{
+	max-width: 1280px;
+	width:100%;
+	margin: 0 auto;
+}
+
+header{
+	padding: 20px 5%;
+}
+
+div.logo{
+	float: left;
+}
+
+nav.menu-desktop{
+ 	float: right;
+}
+
+nav.menu-desktop ul{
+	padding: 25px 10px;
+}
+
+nav.menu-desktop li{
+	float: left;
+	padding: 10px;
+	list-style-type: none;
+	text-transform: uppercase;
+}
+
+nav.menu-desktop li a{
+	padding: 0 10px;
+	text-decoration: none;
+	color: black;	
+}
+
+nav.menu-desktop li a:hover{
+	color:red;
+}
+
+nav.menu-mobile{
+	margin-top: 20px;
+	display:none;
+	width: 70px;
+	height: 70px;
+	float: right;
+	list-style-type: none;
+	background-image: url('../img/icons-menu.png');
+	background-size:100% 100%;
+	cursor: pointer;
+}
+
+nav.menu-mobile ul{
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	background-color: white;
+	left: 0;
+	top: 130px;
+	z-index: 100;
+	display: none;
+}
+
+nav.menu-mobile li{
+	list-style-type: none;
+	padding: 10px;
+	font-size: 23px;
+	font-style: italic;
+	border-bottom: 1px solid grey;
+}
+
+nav.menu-mobile a{
+	text-decoration: none;
+	color: black;
+}
+
+section.banner-principal{
+	overflow:hidden;
+	width: 100%;
+	height: 550px;
+	background-color: black;
+	background-image: url('../img/bg.jpg');
+	background-size: contain;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+.text-banner{
+	padding:70px;
+}
+
+.text-single{
+	width: 314px;
+	font-style: italic;
+	margin-top:30px;
+	height: 70px;
+	line-height: 70px;
+	padding-left: 50px;
+	text-transform: uppercase;
+	color: white;
+	font-size: 23px;
+	background-image: url('../img/box-text.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.text-banner .text-single:nth-of-type(2){
+	width: 200px;
+	height: 70px;
+	line-height: 70px;
+	position: relative;
+	left: -10px;
+}
+
+.text-banner .text-single:nth-of-type(3){
+	width: 170px;
+	height: 70px;
+	line-height: 70px;
+	position: relative;
+	left: -20px;
+}
+
+.text-banner .text-single:nth-of-type(4){
+	width: 320px;
+	height: 60px;
+	font-size: 21px;
+	color: black;
+	position: relative;
+	left: -30px;
+	line-height: 70px;
+	background-image: url('../img/box-white-text.png');
+}
+
+section.destaque{
+	padding: 90px 2%;
+}
+
+section.destaque .container{
+	max-width: 1000px;
+	padding: 40px 0;
+	text-align: left;
+
+}
+
+
+section.destaque .line-title{
+	position: relative;
+	text-align: center;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.line{
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	top:20px;
+	background-color: black;
+}
+
+section.destaque .line-title h2{
+	position: relative;
+	background-color: white;
+	display: inline-block;
+	text-align: center;
+	font-size: 27px;
+	padding:0 10px;
+}
+
+.vitrine-destaque{
+	float: left;
+	width: 33.3%;
+}
+
+.vitrine-destaque .carro-img{
+	width: 100%;
+	padding-top: 100%;
+	border: 8px solid white;
+	background-size: 100% 100%;
+}
+
+.vitrine-destaque h2{
+	padding-left: 8px;
+	color: black;
+	font-style: italic;
+	font-size: 20px;
+}
+
+.vitrine-destaque p{
+	padding-left: 8px;
+	color: #353535;
+	font-size: 15px;
+	font-style: italic;
+	padding-top: 8px;
+}
+
+.vitrine-destaque a{
+	margin-top: 10px;
+	margin-left: 8px;
+	color: white;
+	font-size: 16px;
+	font-style: italic;
+	width: 150px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+	background-color: #EB2D2D ;
+	text-decoration: none;
+	border-bottom: 5px solid #B21E1E;
+}
+
+
+@media screen and (max-width: 768px){
+	section.banner-principal{
+		background-size: cover;
+		background-position: 100px center;
+		height: 80vh;
+	}
+
+	nav.menu-desktop{
+		display: none;
+	}
+
+	nav.menu-mobile{
+		display: block;
+	}
+
+}
+
+@media screen and (max-width: 580px){
+	.text-banner{
+		padding:30px;
+	}
+
+	.text-single{
+		width: 240px;
+		font-size: 18px;
+	}
+
+	.text-banner .text-single:nth-of-type(4){
+		width: 270px;
+	}
+
+	section.destaque .line-title h2{
+		font-size: 23px;
+	}
+
+	section.destaque .container{
+		max-width: 1000px;
+		padding: 40px 0;
+		text-align: center;
+	
+	}
+
+	.vitrine-destaque{
+		float: none;
+		width: 80%;
+		display: inline;
+		margin-top: 20px;
+	}
+
+	.vitrine-destaque a{
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width:480){
+	.vitrine-destaque{
+		width: 100%;
+	}
+}
