@@ -157,7 +157,8 @@ section.destaque .container{
 }
 
 
-section.destaque .line-title{
+section.destaque .line-title,
+section.contato .line-title{
 	position: relative;
 	text-align: center;
 	max-width: 1000px;
@@ -172,7 +173,8 @@ section.destaque .line-title{
 	background-color: black;
 }
 
-section.destaque .line-title h2{
+section.destaque .line-title h2,
+section.contato .line-title h2{
 	position: relative;
 	background-color: white;
 	display: inline-block;
@@ -211,6 +213,10 @@ section.destaque .line-title h2{
 .vitrine-destaque a{
 	margin-top: 10px;
 	margin-left: 8px;
+	
+}
+
+.btn1{
 	color: white;
 	font-size: 16px;
 	font-style: italic;
@@ -221,6 +227,189 @@ section.destaque .line-title h2{
 	background-color: #EB2D2D ;
 	text-decoration: none;
 	border-bottom: 5px solid #B21E1E;
+}
+
+.servicos-descricao{
+	display: flex;    /*ao invés de usar float nas divs filhas, usar o display flex ajuda a ajustar a altura das divs(altura fica igual)*/
+}
+
+.half1{
+	width: 50%;
+
+	text-align: center;
+	padding: 90px 0;
+	background: #242424;
+	color: white;
+}
+
+.half-wraper{
+	text-align: left;
+	display: inline-block;
+}
+
+.half-wraper h2,
+.half2 h2{
+	font-weight: normal;
+	font-style: italic;
+	font-size: 32px;
+}
+
+.half-wraper ul{
+	display: inline-block;
+	margin-top: 20px;
+	
+}
+
+.half-wraper li{
+	margin-left: 15px;
+}
+
+.half-wraper a{
+	margin-left: 40px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.half2{
+	width: 50%;
+	text-align: center;
+	padding: 90px 100px;
+	background: #EB2D2D;
+	color: white;
+}
+
+.half2 .depoimento-single{
+	margin-top: 19px;
+}
+
+.half2 .depoimento-single p{
+	font-size: 20px;
+}
+
+.arrows{
+	float:left;
+}
+
+.navigator{
+	float: left;
+	margin-top: 40px;
+	width: 50%;
+	max-width: 700px;
+}
+
+.navigator img{
+	cursor:pointer;
+	margin: 0 20px;
+}
+
+.nome-depoimento{
+	float: right;
+	margin-top: 40px;
+	color: #252525;
+	font-size: 23px;
+
+}
+
+section.contato .line-title{
+	position: relative;
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+section.contato .line-title h2{
+	font-size: 20px;
+	font-style: italic;
+}
+
+section.contato{
+	padding: 80px 2%;
+}
+
+section.contato form{
+	max-width: 600px;
+	margin: 50px auto;
+}
+
+section.contato .form-wraper{
+	float: left;
+	padding: 10px;
+	margin-top: 15px;
+}
+
+section.contato input[type=text]{
+	width: 100%;
+	border:1px solid #ccc;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 15px;
+}
+
+section.contato textarea{
+	width: 100%;
+	border:1px solid #ccc;
+	line-height: 40px;
+	padding-left: 15px;
+	height: 120px;
+}
+
+section.contato form .form-wraper:nth-of-type(5){
+	text-align: center;
+}
+
+section.contato input[type=submit]{
+	border: 0;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.w100{
+	width: 100%;
+}
+
+.w50{
+	width: 50%;
+}
+
+footer{
+	background-color: #252525;
+	padding: 40px 2%;
+}
+
+footer nav{
+	float: left;
+}
+
+
+footer li{
+	float: left;
+	list-style-type: none;
+	font-size: 19px;
+	font-style: italic;
+	padding: 0 35px;
+}
+
+footer li a{
+	text-decoration: none;
+	padding-right: 20px;
+	color: white;
+}
+
+footer p{
+	float: right;
+	color: white;
+	font-size: 15px;
+	font-style: italic;
+	margin-top: 8px;
+}
+
+@media screen and (max-width:850px){
+	.half-wraper a{
+		margin-top: 20px;
+		display: block;
+		margin-left: 0;
+	}
+
 }
 
 
@@ -237,6 +426,40 @@ section.destaque .line-title h2{
 
 	nav.menu-mobile{
 		display: block;
+	}
+
+	section.servicos-descricao{
+		flex-direction: column;
+	}
+
+	.half1{
+		text-align: center;
+		padding: 80px 100px;
+	}
+
+	.half1,.half2{
+		width: 100%;
+	}
+
+	.half-wraper{
+		padding-right: 0;
+		text-align: left;
+	}
+
+	.w50{
+		width: 100%;
+	}
+
+	footer nav{
+		display: none;
+	}
+
+	footer{
+		text-align: center;
+	}
+
+	footer p{
+		float:none;
 	}
 
 }
